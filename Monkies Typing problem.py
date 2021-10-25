@@ -4,7 +4,7 @@ import random
 #from progress.bar import Bar
 
 
-The_String = 'Luke"
+The_String = 'Luke'
 
 chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,!.? "
 
