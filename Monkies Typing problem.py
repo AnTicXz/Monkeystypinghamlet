@@ -1,10 +1,10 @@
 import threading 
 import time
 import random
-from progress.bar import Bar
+#from progress.bar import Bar
 
 
-The_String = 'Luke'
+The_String = 'Luke"
 
 chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,!.? "
 
@@ -12,15 +12,11 @@ def idkwhatimdong(Monknum, type_speed):
     monkey_string = ""
     for item in The_String:
         char = chars[random.randint(0,56)]
-        #print(char)
         if item == char:
             monkey_string += char
-            #print("in here")
         elif item != char:
             break
-     
-    #print(monkey_string)
-    #print(The_String)
+
     if monkey_string == The_String:
         print(Monknum)
         
