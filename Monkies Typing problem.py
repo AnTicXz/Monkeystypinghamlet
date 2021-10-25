@@ -1,7 +1,8 @@
 import threading 
 import time
 import random
-#from progress.bar import Bar
+from alive_progress import alive_bar
+
 
 
 The_String = 'Luke'
@@ -24,11 +25,11 @@ def idkwhatimdong(Monknum, type_speed):
 def main():
     c=0
     size = 100000000
-    #with Bar(c) as bar:
-    for x in range(0,size):
-        idkwhatimdong(c,0)
-        c+=1
-            #bar.next()
+    with alive_bar(size) as bar:
+        for x in range(0,size):
+            idkwhatimdong(c,0)
+            c+=1
+            bar()
 
 main()
 
