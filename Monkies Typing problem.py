@@ -5,7 +5,7 @@ from alive_progress import alive_bar
 
 
 
-The_String = 'Luke'
+The_String = 'Hello, Luke made me think of this'
 
 chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,!.? "
 
@@ -24,17 +24,24 @@ def idkwhatimdong(Monknum, type_speed):
 
 def main():
     c=0
-    size = 100000000
+    size = 1000000000
     with alive_bar(size) as bar:
         for x in range(0,size):
             idkwhatimdong(c,0)
-            c+=1
+            c+=0
             bar()
+
 
 main()
 
 
 
-#thread.start_new_thread( print_time, ("Thread-1", 2, ) )
-#thread.start_new_thread( print_time, ("Thread-2", 4, ) )
+
+"""
+for x in range(0,15):
+    t = threading.Thread(target=main)
+    t.start()
+    time.sleep(0.1)
+"""
+
 
